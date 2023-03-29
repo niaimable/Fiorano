@@ -5,6 +5,7 @@
     <service-instance name="DB1" x="487" y="304"/>
     <service-instance name="Display1" x="816" y="373"/>
     <service-instance name="JSONConverter1" x="578" y="75"/>
+    <service-instance name="Display2" x="328" y="176"/>
   </subflow>
   <shortcut-routes/>
 </layout>

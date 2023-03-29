@@ -43,4 +43,9 @@
     </target:instance-properties>
     <target:configuration-properties/>
   </target:instance>
+  <target:instance name="Display2">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+  </target:instance>
 </target:target>
