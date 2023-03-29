@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.8.0_361" class="java.beans.XMLDecoder"> 
+ <object class="com.fiorano.bc.feeder.model.FeederPM"> 
+  <void property="attachment"> 
+   <object class="java.util.LinkedHashMap"/> 
+  </void> 
+  <void property="configuredVersion"> 
+   <int>1300</int> 
+  </void> 
+  <void property="defaultMessage"> 
+   <string>&lt;ns1:SQL_CFG_1 xmlns:ns1=&quot;http://www.fiorano.com/fesb/activity/DB1/Request&quot; id=&quot;-7205247295401624576&quot;&gt;
+   &lt;ns1:getempl&gt;string&lt;/ns1:getempl&gt;
+   &lt;ns1:gethot&gt;string&lt;/ns1:gethot&gt;
+&lt;/ns1:SQL_CFG_1&gt;</string> 
+  </void> 
+  <void property="elementsToEncrypt"> 
+   <object class="com.fiorano.services.common.configuration.EncryptDecryptElements"> 
+    <void property="namespaces"> 
+     <void method="put"> 
+      <string>xsd</string> 
+      <string>http://www.w3.org/2001/XMLSchema</string> 
+     </void> 
+     <void method="put"> 
+      <string>xml</string> 
+      <string>http://www.w3.org/XML/1998/namespace</string> 
+     </void> 
+     <void method="put"> 
+      <string>ns1</string> 
+      <string>http://www.fiorano.com/fesb/activity/DB1/Request</string> 
+     </void> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="errorHandlingConfiguration"> 
+   <void property="errorActionsMap"> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>3</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>2</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>1</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.RetryAction"> 
+       <void property="configuration"> 
+        <object class="com.fiorano.edbc.framework.service.exception.RetryConfiguration"> 
+         <void property="otherActions"> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+            <void property="id"> 
+             <int>1</int> 
+            </void> 
+           </object> 
+           <int>1</int> 
+          </void> 
+          <void method="put"> 
+           <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+           <int>1</int> 
+          </void> 
+         </void> 
+        </object> 
+       </void> 
+       <void property="id"> 
+        <int>2</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>4</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void method="get"> 
+     <object class="com.fiorano.edbc.framework.service.exception.ServiceErrorID" method="getServiceErrorId"> 
+      <int>0</int> 
+     </object> 
+     <void method="clear"/> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"/> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>6</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>1</int> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="add"> 
+      <object class="com.fiorano.edbc.framework.service.exception.ErrorHandlingAction"> 
+       <void property="id"> 
+        <int>5</int> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </void> 
+  </void> 
+  <void property="header"> 
+   <object class="java.util.LinkedHashMap"/> 
+  </void> 
+  <void property="schema"> 
+   <object class="fiorano.esb.record.ESBRecordDefinition"> 
+    <void property="rootElementName"> 
+     <string>SQL_CFG_1</string> 
+    </void> 
+    <void property="structure"> 
+     <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;
+&lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.fiorano.com/fesb/activity/DB1/Request&quot;&gt;&#13;
+   &lt;xsd:element name=&quot;SQL_CFG_1&quot;&gt;&#13;
+      &lt;xsd:complexType&gt;&#13;
+         &lt;xsd:sequence&gt;&#13;
+            &lt;xsd:element minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; name=&quot;getempl&quot;&gt;&#13;
+               &lt;xsd:complexType&gt;&#13;
+                  &lt;xsd:simpleContent&gt;&#13;
+                     &lt;xsd:extension base=&quot;xsd:string&quot;/&gt;&#13;
+                  &lt;/xsd:simpleContent&gt;&#13;
+               &lt;/xsd:complexType&gt;&#13;
+            &lt;/xsd:element&gt;&#13;
+            &lt;xsd:element minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot; name=&quot;gethot&quot;&gt;&#13;
+               &lt;xsd:complexType&gt;&#13;
+                  &lt;xsd:simpleContent&gt;&#13;
+                     &lt;xsd:extension base=&quot;xsd:string&quot;/&gt;&#13;
+                  &lt;/xsd:simpleContent&gt;&#13;
+               &lt;/xsd:complexType&gt;&#13;
+            &lt;/xsd:element&gt;&#13;
+         &lt;/xsd:sequence&gt;&#13;
+         &lt;xsd:attribute name=&quot;id&quot; type=&quot;xsd:long&quot; use=&quot;optional&quot;/&gt;&#13;
+      &lt;/xsd:complexType&gt;&#13;
+   &lt;/xsd:element&gt;&#13;
+&lt;/xsd:schema&gt;&#13;
+</string> 
+    </void> 
+    <void property="targetNamespace"> 
+     <string>http://www.fiorano.com/fesb/activity/DB1/Request</string> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

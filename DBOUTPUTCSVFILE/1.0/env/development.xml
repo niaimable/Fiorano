@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target:target xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:target="http://fiorano.com/environment/1.0" xsi:schemaLocation="http://fiorano.com/environment/1.0 env.xsd">
+  <target:instance name="DB1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="DBConfigurations" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.adapter.db.jdbc.DBConfigurations&quot; xmlns:ns2=&quot;uri:com.fiorano.services.common.jaxb.adapter&quot; xmlns:ns1=&quot;uri:com.fiorano.adapter.db.jdbc&quot;>
+    &lt;ns1:passwordFromVault>false&lt;/ns1:passwordFromVault>
+    &lt;ns1:customPasswordEncryption>false&lt;/ns1:customPasswordEncryption>
+    &lt;ns1:database>Mckoi&lt;/ns1:database>
+    &lt;ns1:driver>com.mckoi.JDBCDriver&lt;/ns1:driver>
+    &lt;ns1:url>jdbc:mckoi://localhost&lt;/ns1:url>
+    &lt;ns1:username>mckoiuser&lt;/ns1:username>
+    &lt;ns1:password>DMSLzKckc/JLgIUhIpdeyw==&lt;/ns1:password>
+    &lt;ns1:pingSQL>select count(*) from SYS_JDBC.Tables&lt;/ns1:pingSQL>
+    &lt;ns1:connectionProperties>
+        &lt;ns2:property>
+            &lt;ns2:key xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>Name0&lt;/ns2:key>
+            &lt;ns2:value xsi:type=&quot;xs:string&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;> &lt;/ns2:value>
+        &lt;/ns2:property>
+    &lt;/ns1:connectionProperties>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="Feeder1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties/>
+  </target:instance>
+  <target:instance name="Display1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties/>
+  </target:instance>
+  <target:instance name="XML2Text1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="FlatXMLConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.adapter.jca.flattoxml.FlatXMLConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.adapter.jca.flattoxml&quot;>
+    &lt;ns1:schemaContent>&amp;lt;FileLayout&amp;gt;
+   &amp;lt;FileSections name=&quot;Employee_Schema&quot;&amp;gt;
+      &amp;lt;GlobalParsingInfo ignore-lines-start-lineno=&quot;0&quot; ignore-lines-end-lineno=&quot;0&quot;&amp;gt;
+         &amp;lt;RecordDelimiter&amp;gt;
+            &amp;lt;Delimiter type=&quot;custom-delimiter&quot; escapeCharType=&quot;Character&quot;&amp;gt;0d0a&amp;lt;/Delimiter&amp;gt;
+         &amp;lt;/RecordDelimiter&amp;gt;
+         &amp;lt;DefaultFieldDelimiter&amp;gt;
+            &amp;lt;Delimiter type=&quot;custom-delimiter&quot; escapeCharType=&quot;Character&quot; escapeChar=&quot;5c&quot;&amp;gt;2c&amp;lt;/Delimiter&amp;gt;
+         &amp;lt;/DefaultFieldDelimiter&amp;gt;
+      &amp;lt;/GlobalParsingInfo&amp;gt;
+      &amp;lt;Record xmlType=&quot;Element&quot; minOccurs=&quot;-1&quot; maxOccurs=&quot;-1&quot; parsingType=&quot;DELIMITED&quot; childCount=&quot;0&quot; name=&quot;Employee&quot;&amp;gt;
+         &amp;lt;RecordIdentifier type=&quot;None&quot;/&amp;gt;
+         &amp;lt;FieldDelimiter&amp;gt;
+            &amp;lt;Delimiter type=&quot;custom-delimiter&quot; escapeCharType=&quot;Character&quot; escapeChar=&quot;5c&quot;&amp;gt;2c&amp;lt;/Delimiter&amp;gt;
+         &amp;lt;/FieldDelimiter&amp;gt;
+         &amp;lt;RecordContent&amp;gt;
+            &amp;lt;Field xmlType=&quot;Element&quot; startPosition=&quot;1&quot; endPosition=&quot;1&quot; trimspaces=&quot;Leading&quot; alignment=&quot;LEFT&quot; mapIfNull=&quot;NO&quot; name=&quot;serialno&quot;&amp;gt;
+               &amp;lt;DataType format=&quot;&quot;&amp;gt;String&amp;lt;/DataType&amp;gt;
+            &amp;lt;/Field&amp;gt;
+            &amp;lt;Field xmlType=&quot;Element&quot; startPosition=&quot;1&quot; endPosition=&quot;1&quot; trimspaces=&quot;Leading&quot; alignment=&quot;LEFT&quot; mapIfNull=&quot;NO&quot; name=&quot;Name&quot;&amp;gt;
+               &amp;lt;DataType format=&quot;&quot;&amp;gt;String&amp;lt;/DataType&amp;gt;
+            &amp;lt;/Field&amp;gt;
+            &amp;lt;Field xmlType=&quot;Element&quot; startPosition=&quot;1&quot; endPosition=&quot;1&quot; trimspaces=&quot;Leading&quot; alignment=&quot;LEFT&quot; mapIfNull=&quot;NO&quot; name=&quot;phonenumber&quot;&amp;gt;
+               &amp;lt;DataType format=&quot;&quot;&amp;gt;String&amp;lt;/DataType&amp;gt;
+            &amp;lt;/Field&amp;gt;
+         &amp;lt;/RecordContent&amp;gt;
+      &amp;lt;/Record&amp;gt;
+   &amp;lt;/FileSections&amp;gt;
+&amp;lt;/FileLayout&amp;gt;&lt;/ns1:schemaContent>
+&lt;/ns1:namedConfiguration>
+</target:property>
+    </target:configuration-properties>
+  </target:instance>
+  <target:instance name="FileWriter1">
+    <target:instance-properties>
+      <target:deployment cache="true" nodes="fps"/>
+    </target:instance-properties>
+    <target:configuration-properties>
+      <target:property encrypt="false" name="Post Processing Arguments" type="java.lang.String"></target:property>
+      <target:property encrypt="false" name="FileWriterConfiguration" type="NamedObject">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;ns1:namedConfiguration ns1:CLASS_NAME=&quot;com.fiorano.adapter.jca.filewriter.cci.FileWriterConfiguration&quot; xmlns:ns1=&quot;uri:com.fiorano.adapter.jca.filewriter.cci&quot;>
+    &lt;ns1:connectedToDiffMachine>false&lt;/ns1:connectedToDiffMachine>
+    &lt;ns1:relativeDirectory>C:\Fiorano\13&lt;/ns1:relativeDirectory>
+    &lt;ns1:fileName>DBtext&lt;/ns1:fileName>
+    &lt;ns1:targetDirectory>C:\file\Source\TextTarget&lt;/ns1:targetDirectory>
+    &lt;ns1:workingDirectory>C:\file\Source\TextTarget\work&lt;/ns1:workingDirectory>
+    &lt;ns1:errorDirectory>C:\file\Source\TextTarget\error&lt;/ns1:errorDirectory>
+&lt;/ns1:namedConfiguration>
+</target:property>
+      <target:property encrypt="false" name="File Encoding" type="java.lang.String">UTF-8</target:property>
+    </target:configuration-properties>
+  </target:instance>
+</target:target>

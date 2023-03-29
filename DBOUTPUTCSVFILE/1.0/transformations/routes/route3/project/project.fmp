@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappermodel:MapperProject xmlns:mappermodel="http://www.fiorano.com/tools/mapper/mappermodel" convertor="nameIndexed" version="3.0.2">
+  <mappermodel:Comments>Key in relevant comments</mappermodel:Comments>
+  <mappermodel:InputStructure>
+    <mappermodel:Structure duplicates="" filePath="applicationContextSchema.xsd" mime="XSD" name="Application-Context" rootName="Context"/>
+    <mappermodel:Structure duplicates="" filePath="OUT_PORT0.xsd" mime="XSD" name="OUT_PORT" rootName="{http://www.fiorano.com/fesb/activity/DB1/Response}SQL_CFG_1"/>
+  </mappermodel:InputStructure>
+  <mappermodel:OutputStructure>
+    <mappermodel:Structure duplicates="" filePath="IN_PORT.xsd" mime="XSD" name="IN_PORT" rootName="{http://www.fiorano.com/fesb/activity/XML2Text1}Employee_Schema"/>
+  </mappermodel:OutputStructure>
+  <mappermodel:Mappings>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Employee_Schema:0,[ZERO MANY]:0,Employee:0,serialno:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="OUT_PORT:0,SQL_CFG_1:0,[ZERO MANY]:0,getempl:0,EMPNO:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2,3" outputNode="IN_PORT:0,Employee_Schema:0,[ZERO MANY]:0,Employee:0,Name:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="OUT_PORT:0,SQL_CFG_1:0,[ZERO MANY]:0,getempl:0,NAME:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:FunctionGraphNode label="_" type="22" x="141" y="90">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:TreeGraphNode inputNode="OUT_PORT:0,SQL_CFG_1:0,[ZERO MANY]:0,getempl:0,DOJ:0" x="-14" y="147">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:FunctionGraphNode label="Concat" type="20" x="334" y="154">
+        <mappermodel:InputPins>1,2,3,4,5</mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label=".txt" type="22" x="67" y="218">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label="setStringProperty" type="136" x="685" y="139">
+        <mappermodel:InputPins>name,value</mappermodel:InputPins>
+        <mappermodel:OutputPins>R</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:FunctionGraphNode label="FileName" type="22" x="722" y="71">
+        <mappermodel:InputPins></mappermodel:InputPins>
+        <mappermodel:OutputPins>str</mappermodel:OutputPins>
+        <mappermodel:Properties/>
+      </mappermodel:FunctionGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+      <mappermodel:Link inputID="4" inputIndex="0" outputID="1" outputIndex="0"/>
+      <mappermodel:Link inputID="4" inputIndex="1" outputID="2" outputIndex="0"/>
+      <mappermodel:Link inputID="4" inputIndex="2" outputID="3" outputIndex="0"/>
+      <mappermodel:Link inputID="4" inputIndex="3" outputID="5" outputIndex="0"/>
+      <mappermodel:Link inputID="6" inputIndex="1" outputID="4" outputIndex="0"/>
+      <mappermodel:Link inputID="6" inputIndex="0" outputID="7" outputIndex="0"/>
+      <mappermodel:Link inputID="0" inputIndex="1" outputID="6" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Employee_Schema:0,[ZERO MANY]:0,Employee:0,phonenumber:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="OUT_PORT:0,SQL_CFG_1:0,[ZERO MANY]:0,getempl:0,MGRNO:0" x="56" y="87">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+    <mappermodel:GraphModel inputPins="1,2" outputNode="IN_PORT:0,Employee_Schema:0,[ZERO MANY]:0" x="-1" y="-1">
+      <mappermodel:TreeGraphNode inputNode="OUT_PORT:0,SQL_CFG_1:0,[ZERO MANY]:0,getempl:0" x="-1" y="-1">
+        <mappermodel:InputPins>1st</mappermodel:InputPins>
+        <mappermodel:OutputPins>1st</mappermodel:OutputPins>
+      </mappermodel:TreeGraphNode>
+      <mappermodel:Link inputID="0" inputIndex="0" outputID="1" outputIndex="0"/>
+    </mappermodel:GraphModel>
+  </mappermodel:Mappings>
+  <mappermodel:Extensions/>
+</mappermodel:MapperProject>
